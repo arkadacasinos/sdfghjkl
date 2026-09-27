@@ -97,6 +97,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Faro Casino" />
+        <meta name="yandex-verification" content="9ef9f9dda1a5f408" />
       </head>
       <body className="frc-body">
         {children}
